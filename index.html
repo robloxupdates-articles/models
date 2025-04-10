@@ -22,7 +22,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         @keyframes gradientAnimation {
@@ -94,12 +93,13 @@
             margin: 20px auto;
             padding: 20px;
             text-align: center;
+            flex: 1;
         }
 
         .card {
             background: rgba(0, 0, 139, 0.3);
             padding: 20px;
-            margin: 20px 0;
+            margin-bottom: 20px;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -127,7 +127,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin: 20px 0 40px;
         }
 
         .saber-item {
@@ -148,7 +148,6 @@
             padding: 20px;
             background: rgba(0, 0, 0, 0.6);
             color: #fff;
-            margin-top: 20px;
             backdrop-filter: blur(5px);
             animation: fadeIn 1s ease-in-out;
         }
@@ -229,7 +228,7 @@
             </div>
             <ul>
                 <li><a href="index.html">Models</a></li>
-                <li><a href="evanblokender.github.io/index.html">Go Back</a></li>
+                <li><a href="https://evanblokender.github.io/index.html">Go Back</a></li>
             </ul>
         </nav>
         <a href="https://youtube.com/@evanblokender" class="button" target="_blank">My YouTube</a>
@@ -242,16 +241,14 @@
         </div>
 
         <div class="saber-grid" id="saber-container">
-            <!-- Saber items will be added here dynamically -->
-            <!-- Example items - you can add more by copying the structure below -->
             <div class="saber-item">
                 <h3>Block Saber</h3>
-                <img src="https://tenor.googleapis.com/v2/media?id=10774885397077320642&format=optimizedgif&client_key=tenor_web&appversion=browser-r20250409-1&access_token=ya29.a0AZYkNZgsjL4lyhUOToxGfE_YwJH84-p8cRFtMtDSxImtyCpzWg3ju4Cq2-eg1dnYETP7-cPWATiHPiKX86LDqkeiOCDjIasLNCANaV8jyB4SsY1peHGMTJKnt1vCF1ry1qg--TEBactrTv1nLlJZRhliffjCXBbQZFSJ17N4aCgYKAYYSARISFQHGX2MiTLTckujYBsM73lccrC2PKQ0175&key=AIzaSyC-P6_qz3FzCoXGLk6tgitZo4jEJ5mLzD8" alt="Neon Blade">
+                <img src="media.gif" alt="saber main 1">
                 <p>A saber that is very mm block saber made by https://youtube.com/@vortexwizrd</p>
                 <p><strong>Type:</strong> Saber</p>
                 <p><strong>Download:</strong> <a href="https://github.com/EvanBlokEnder/EvanBlokEnder.github.io/raw/refs/heads/main/bsblocksaber.zip" style="color: #add8e6;">Link</a></p>
             </div>
-        
+        </div>
     </div>
 
     <footer>
@@ -268,14 +265,7 @@
             navUl.classList.toggle('active');
         });
 
-            document.getElementById('saber-container').prepend(newItem);
-            
-            // Reset form
-            this.reset();
-            
-            // Scroll to the new item
-            newItem.scrollIntoView({ behavior: 'smooth' });
-        });
+        // Remove the form submission code that wasn't being used
     </script>
 </body>
 </html>
