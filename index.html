@@ -112,15 +112,24 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .card img {
-            max-width: 100%;
-            height: auto;
+        /* Image container improvements */
+        .image-container {
+            width: 100%;
+            height: 200px; /* Fixed height for all image containers */
+            overflow: hidden; /* Prevent images from overflowing */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            background: rgba(0, 0, 0, 0.2);
         }
 
-        .card img:hover {
-            transform: scale(1.05);
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Maintain aspect ratio while fitting within container */
+            transition: transform 0.3s ease;
         }
 
         .saber-grid {
@@ -135,11 +144,17 @@
             padding: 15px;
             border-radius: 8px;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .saber-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .saber-item:hover img {
+            transform: scale(1.05);
         }
 
         /* Footer */
@@ -214,6 +229,10 @@
             .saber-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .image-container {
+                height: 150px; /* Smaller fixed height for mobile */
+            }
         }
     </style>
 </head>
@@ -243,14 +262,18 @@
         <div class="saber-grid" id="saber-container">
             <div class="saber-item">
                 <h3>Block Saber</h3>
-                <img src="media.gif" alt="saber main 1">
+                <div class="image-container">
+                    <img src="media.gif" alt="saber main 1">
+                </div>
                 <p>A saber that is very mm block saber made by https://youtube.com/@vortexwizrd</p>
                 <p><strong>Type:</strong> Saber</p>
                 <p><strong>Download:</strong> <a href="https://github.com/EvanBlokEnder/EvanBlokEnder.github.io/raw/refs/heads/main/bsblocksaber.zip" style="color: #add8e6;">Link</a></p>
             </div>
             <div class="saber-item">
                 <h3>DN-CurvedCamo V2</h3>
-                <img src="DN-CurvedCamo_V2.png" alt="saber main 2">
+                <div class="image-container">
+                    <img src="DN-CurvedCamo_V2.png" alt="saber main 2">
+                </div>
                 <p>A saber that looks pretty cool! cant give proper credit user deleted.</p>
                 <p><strong>Type:</strong> Saber</p>
                 <p><strong>Download:</strong> <a href="https://github.com/EvanBlokEnder/EvanBlokEnder.github.io/raw/refs/heads/main/DN-CurvedCamo%20V2.whacker" style="color: #add8e6;">Link</a></p>
@@ -271,8 +294,6 @@
             hamburger.classList.toggle('active');
             navUl.classList.toggle('active');
         });
-
-        // Remove the form submission code that wasn't being used
     </script>
 </body>
 </html>
